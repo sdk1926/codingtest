@@ -24,7 +24,6 @@ class Solution:
         return list3
 
 # 상길선생님의 풀이 
-
 class Solution:
     # 연결리스트 뒤집기 
     def reverseList(self, head: ListNode) -> ListNode:
@@ -63,3 +62,27 @@ class Solution:
         
         # 최종 계산 결과 연결 리스트 변환 
         return self.toReversedLinkedList(str(resultStr))
+
+# 전가산기 풀이 자릿수 올림 
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        root = head = ListNode(0)
+
+        carry = 0 #자릴수 올림수 
+        while l1 or l2 or carry: # l1 or l2 or carry 셋 중 하나라도 안비었으면 계속 ㄱ 
+            sum = 0
+            # 두 입력값의 합 계산 
+            if l1:
+                sum += l1.val
+                l1 = l1.next
+            if l2: 
+                sum = l2.val
+                l2 = l2.next
+            
+            # 몫(자리올림수)과 나머지(값) 계산
+            carry, val = divmod(sum + carry, 10)
+            head.next = ListNode(val)
+            head = head.next
+    
+        return root.next
+
