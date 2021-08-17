@@ -1,7 +1,6 @@
-list1 = ['2','4','3','5']
-list1.reverse()
-list1 = int(''.join(list1))
-print(list1)
-list3 = list(str(807))
-list3.reverse()
-print(list3)
+a = [0]*7
+print(a)
+a.append(1)
+print(a)
+print(a.count(1))
+print(a[:2])
