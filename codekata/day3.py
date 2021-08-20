@@ -10,3 +10,8 @@ def get_len_of_str(s):
       else:
         dic[v] = i
     return  max(long, len(dic))
+
+
+
+
+
