@@ -63,3 +63,18 @@ class Solution:
         while rev and rev.val == slow.val:
             slow, rev = slow.next, rev.next
         return not rev 
+
+# 내 풀이
+
+from collections import deque
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        list1 = []
+        while head != None:
+            list1.append(head.val)
+            head = head.next
+        list1 = deque(list1)
+        while len(list1) > 1:
+            if list1.popleft() != list1.pop():
+                return False
+        return True 
