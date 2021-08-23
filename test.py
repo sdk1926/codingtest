@@ -1,11 +1,7 @@
 import re
-email = 'dsafsnaver.com'
+password = 'wow12!'
 
-# print(not re.match('^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', email))
+print(re.match('^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d@$!%*#?&]{8,}$', password))
+print(re.match('^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$', password))
 
-r = re.compile('[\w]+[@][\w]+[.][\w]+')
-
-if r.match('wegjkn@gmail.com'):
-    print('True')
-else:
-    print(False)
+                
