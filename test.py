@@ -1,7 +1,8 @@
-import re
-password = 'wow12!'
-
-print(re.match('^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d@$!%*#?&]{8,}$', password))
-print(re.match('^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$', password))
-
-                
+s = "cbacdcbc"
+s = list(s)
+list1 = []
+for _ in range(len(s)):
+    a = s.pop(0)
+    if a not in s:
+        list1.append(a)
+print(list1)
