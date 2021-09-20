@@ -1,5 +1,3 @@
-import sys
-
 n = int(input())
 for i in range(n):
     k = int(input())
@@ -9,4 +7,3 @@ for i in range(n):
         for m in range(1,n):
             people[m] += people[m-1]
     print(people[-1])
-
